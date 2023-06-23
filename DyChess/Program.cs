@@ -1,7 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// Code assumes english localisation
+// Todo: to readme.md
 using DyChess;
-
-Console.WriteLine("Hello, World!");
 
 var Game = new Game 
 { 
@@ -26,7 +25,6 @@ public class Game
 
     public void Action(Position From, Position To)
     {
-        var piece = Board.units.Where(x => x.Position == From).SingleOrDefault();
-        //piece.Move
+        
     }
 }

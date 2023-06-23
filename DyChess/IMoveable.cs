@@ -2,6 +2,6 @@
 {
     public interface IMoveable
     {
-        DestinationEvent? Move(Position toPosition);
+        void Move(Position fromPosition, Position toPosition);
     }
 }

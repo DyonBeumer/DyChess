@@ -2,7 +2,7 @@
 {
     public class Board
     {
-        public int[,] Positions { get; set; }
+        public int[,] Positions { get; set; } = null!;
         public record Unit(UnitType Type, Player Player, Position Position);
         public Unit[] units { get; set; } = null!;
         public Board()
@@ -12,6 +12,8 @@
 
         private void Setup()
         {
+
+
             var units = new List<Unit>();
             for (int i = 0; i<7; i++)
             {
@@ -41,24 +43,25 @@
 
         public void Print()
         {
-            foreach (var unit in this.units)
-            {
-                Console.WriteLine($"Unit: {unit.Type} Position: x={unit.Position.x}y={unit.Position.y} Player: {unit.Player}");
-            }
-            //if (units is null)
+            //foreach (var unit in this.units)
             //{
-            //    Console.WriteLine("No Units - Initial setup did not run or failed");
+            //    Console.WriteLine($"Unit: {unit.Type} Position: x={unit.Position.x}y={unit.Position.y} Player: {unit.Player}");
             //}
-            //else
-            //{
-            //    Console.WriteLine("Peon = P, Rook = R, Knight = N, Bishop = B, Queen = Q, King = K, * = Empty");
 
-            //    var agg = "8 ";
-            //    for (int i = 0; i < 8; i++)
-            //    {
-            //        agg += string.Format("| {unit} |", );
-            //    }
-            //}
+
+            if (units is null)
+            {
+                Console.WriteLine("no units - initial setup did not run or failed");
+            }
+            else
+            {
+                Console.WriteLine("Format:");
+                Console.WriteLine("<Unique Position Identifier>");
+                Console.WriteLine("<Color>:<Piece>"); // TODO: Add DestinationEvent Data
+                Console.WriteLine("Pawn = P, Rook = R, Knight = N, Bishop = B, Queen = Q, King = K, * = empty");
+
+
+            }
         }
 
     }
