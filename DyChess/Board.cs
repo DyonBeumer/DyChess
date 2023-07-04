@@ -47,8 +47,9 @@
             var units = new List<Unit>();
             for (int i = 0; i<7; i++)
             {
-                units.Add(new Unit(new Pawn(), Player.Black));  //a7 t/m h7
-                units.Add(new Unit(new Pawn(), Player.White));  //a2 t/m h2
+
+                Positions[i, 1].Item2 = new Unit(new Pawn(), Player.Black); //a7 t/m h7
+                Positions[i, 6].Item2 = new Unit(new Pawn(), Player.White);  //a2 t/m h2
             }
 
             Positions[0, 7].Item2 = new Unit(new Rook(), Player.Black); //a8
