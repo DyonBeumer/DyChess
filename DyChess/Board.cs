@@ -30,7 +30,7 @@
                 for (int j = 1; j <= 8; j++) // verticals
                 {
                     var id = $"{horizontals[i] + "" + j}";
-                    Console.WriteLine($"Initializing {id}", id);
+                    //Console.WriteLine($"Initializing {id}", id);
                     Positions[i, j-1] = new (id, null);
                 }
             }
