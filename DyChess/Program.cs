@@ -1,6 +1,5 @@
 ﻿// Code assumes english localisation
 // Todo: to readme.md
-using DyChess;
 
 var Game = new Game 
 { 
@@ -9,22 +8,10 @@ var Game = new Game
 };
 
 Game.Board.Print();
-public class Game
+
+while(Game.Result == null)
 {
-    public Board Board { get; set; }
-    public string WhitePlayerName { get; set; } = null!;
-    public string BlackPlayerName { get; set; } = null!;
-    public string Result { get; set; } = null!;
-
-    public Player ActivePlayer = Player.White;
-
-    public Game()
-    {
-        Board = new Board();
-    }
-
-    public void Action(Position From, Position To)
-    {
-        
-    }
+    Console.WriteLine($"starting game: first turn {Game.ActivePlayer.ToString()}");
+    var input = Console.ReadLine();
+    //AlgebraicNotationInterpreter.Interprete(input, )
 }
