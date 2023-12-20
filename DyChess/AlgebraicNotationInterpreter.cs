@@ -7,8 +7,9 @@ public static class AlgebraicNotationInterpreter
 {
     public static (Position, Position) Interprete(context context)
     {
-
         return new (null, null);
+
+        // if ("k", "q", "r", "b", "n")
     }
 }
 
