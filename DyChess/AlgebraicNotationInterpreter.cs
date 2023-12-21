@@ -12,10 +12,9 @@ public static class AlgebraicNotationInterpreter
         // if ("k", "q", "r", "b", "n")
     }
 }
-
 public class context
 {
     public Player Player { get; set; }
     public string Input { get; set; }
-    public Board currentBoard { get; set; }
+    public Board CurrentBoard { get; set; }
 }

@@ -20,7 +20,7 @@ while(Game.Result == null)
         {
             Player = Game.ActivePlayer,
             Input = input,
-            currentBoard = Game.Board
+            CurrentBoard = Game.Board
         });
 
         Game.Action(action.Item1, action.Item2);
