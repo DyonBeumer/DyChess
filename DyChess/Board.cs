@@ -93,6 +93,7 @@
             }
             else
             {
+                Console.OutputEncoding = System.Text.Encoding.UTF8;
                 Console.WriteLine("Format:");
                 Console.WriteLine("<Unique Position Identifier>");
                 Console.WriteLine("<Color>:<Piece>"); // TODO: Add DestinationEvent Data
