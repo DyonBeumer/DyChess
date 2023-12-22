@@ -81,6 +81,28 @@
 
         public void Print()
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+           
+            var board = $"  ┌---┬---┬---┬---┬---┬---┬---┬---┐ \n" +
+                        $"8 |   |   |   |   |   |   |   |   | \n" +
+                        $"  ├---┼---┼---┼---┼---┼---┼---┼---┤ \n" +
+                        $"7 |   |   |   |   |   |   |   |   | \n" +
+                        $"  ├---┼---┼---┼---┼---┼---┼---┼---┤ \n" +
+                        $"6 |   |   |   |   |   |   |   |   | \n" +
+                        $"  ├---┼---┼---┼---┼---┼---┼---┼---┤ \n" +
+                        $"5 |   |   |   |   |   |   |   |   | \n" +
+                        $"  ├---┼---┼---┼---┼---┼---┼---┼---┤ \n" +
+                        $"4 |   |   |   |   |   |   |   |   | \n" +
+                        $"  ├---┼---┼---┼---┼---┼---┼---┼---┤ \n" +
+                        $"3 |   |   |   |   |   |   |   |   | \n" +
+                        $"  ├---┼---┼---┼---┼---┼---┼---┼---┤ \n" +
+                        $"2 |   |   |   |   |   |   |   |   | \n" +
+                        $"  ├---┼---┼---┼---┼---┼---┼---┼---┤ \n" +
+                        $"1 |   |   |   |   |   |   |   |   | \n" +
+                        $"  └---┴---┴---┴---┴---┴---┴---┴---┘ \n" +
+                        $"    a   b   c   d   e   f   g   h";
+
+            Console.WriteLine(board);
             //foreach (var unit in this.units)
             //{
             //    Console.WriteLine($"Unit: {unit.Type} Position: x={unit.Position.x}y={unit.Position.y} Player: {unit.Player}");
@@ -93,13 +115,7 @@
             }
             else
             {
-                Console.OutputEncoding = System.Text.Encoding.UTF8;
-                Console.WriteLine("Format:");
-                Console.WriteLine("<Unique Position Identifier>");
-                Console.WriteLine("<Color>:<Piece>"); // TODO: Add DestinationEvent Data
-                Console.WriteLine("Pawn = P, Rook = R, Knight = N, Bishop = B, Queen = Q, King = K, * = empty");
-
-
+                Console.WriteLine("Input Format: Algebraic notation with US locale");
             }
         }
 
