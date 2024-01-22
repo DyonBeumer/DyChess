@@ -3,11 +3,16 @@
 using DyChess;
 
 //letters K for king, Q for queen, R for rook, B for bishop, and N for knight None for pawn 
-public static class AlgebraicNotationInterpreter
+public class AlgebraicNotationInterpreter
 {
-    public static (Position, Position) Interprete(context context)
+    private AlgebraicNotationTokentizer _tokenizer;
+    public AlgebraicNotationInterpreter()
     {
-        return new (null, null);
+        _tokenizer = new AlgebraicNotationTokentizer();
+    }
+    public (Position, Position) Interprete(context context)
+    {
+        var tokens = _tokenizer.Tokenize(context.Input);
 
         // if ("k", "q", "r", "b", "n")
     }

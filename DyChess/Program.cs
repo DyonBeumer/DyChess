@@ -1,6 +1,8 @@
 ﻿// Code assumes english localisation
 // Todo: to readme.md
 
+var _intepreter = new AlgebraicNotationInterpreter();
+
 var Game = new Game 
 { 
     WhitePlayerName = "Dyon",
@@ -9,14 +11,15 @@ var Game = new Game
 
 Game.Board.Print();
 
-while(Game.Result == null)
+
+while (Game.Result == null)
 {
     Console.WriteLine($"starting game: white pieces played by {Game.WhitePlayerName}, Black pieces by {Game.BlackPlayerName}");
     string? input = Console.ReadLine();
     Console.WriteLine(input);
     if(input is not null)
     {
-        var action = AlgebraicNotationInterpreter.Interprete(new context
+        var action = _intepreter.Interprete(new context
         {
             Player = Game.ActivePlayer,
             Input = input,
