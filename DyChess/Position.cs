@@ -13,7 +13,7 @@
         /// <summary>
         /// Constructor for a position on the board.
         /// Input is a unique chess position i.e. a1
-        /// Converted it should be an 2d array position (starting at 0) i.e. 0,0
+        /// Converted it should be an 2d array position (starting at 0) i.e. x=0,y=0
         /// </summary>
         /// <param name="file"></param>
         /// <param name="rank"></param>
