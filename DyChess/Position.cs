@@ -10,6 +10,13 @@
         //    this.y = y-1;
         //}
 
+        /// <summary>
+        /// Constructor for a position on the board.
+        /// Input is a unique chess position i.e. a1
+        /// Converted it should be an 2d array position (starting at 0) i.e. 0,0
+        /// </summary>
+        /// <param name="file"></param>
+        /// <param name="rank"></param>
         public Position(string file, int rank)
         {
             stringFileToInt(file);
