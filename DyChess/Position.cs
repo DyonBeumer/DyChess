@@ -4,11 +4,11 @@
     {
         public int x, y;
 
-        public Position(int x, int y)
-        {
-            this.x = x;
-            this.y = y-1;
-        }
+        //public Position(int x, int y)
+        //{
+        //    this.x = x;
+        //    this.y = y-1;
+        //}
 
         public Position(string file, int rank)
         {
@@ -29,11 +29,6 @@
                     {"h", 7}
                 };
             files.TryGetValue(intfile, out x);
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
         }
     }
 }
