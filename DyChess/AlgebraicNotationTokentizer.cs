@@ -18,7 +18,7 @@ namespace DyChess
 
             if(results.Count == 1) 
             {
-                output.Destination = results[0].Value;
+                output.Destination = new Position(results[0].Value.Substring(0, 1), int.Parse(results[0].Value.Substring(1, 1)));
             }
 
             return output;
