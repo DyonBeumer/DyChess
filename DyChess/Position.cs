@@ -7,13 +7,13 @@
         public Position(int x, int y)
         {
             this.x = x;
-            this.y = y;
+            this.y = y-1;
         }
 
         public Position(string file, int rank)
         {
             stringFileToInt(file);
-            this.y = rank;
+            this.y = rank-1;
         }
 
         public void stringFileToInt(string intfile)
