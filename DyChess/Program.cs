@@ -26,6 +26,6 @@ while (Game.Result == null)
             CurrentBoard = Game.Board
         });
 
-        Game.Action(action.Item1, action.Item2);
+        
     }
 }

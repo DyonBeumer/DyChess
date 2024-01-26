@@ -13,6 +13,7 @@ public class AlgebraicNotationInterpreter
     public (Position, Position) Interprete(context context)
     {
         var tokens = _tokenizer.Tokenize(context.Input);
+        var unit = context.CurrentBoard.GetUnitFromIdentifier(context.Input);
         return (null,null);
         // if ("k", "q", "r", "b", "n")
     }

@@ -2,6 +2,8 @@
 {
     public class Board
     {
+        private const int defaultFileSize = 8;
+        private const int defaultRankSize = 8;
         public record Unit(IMoveable Type, Player Player);
         public Unit[] units { get; set; } = null!;
         public Board()
@@ -9,7 +11,7 @@
             InitPositions();
             Setup();
         }
-        public (string, Unit?)[,] Positions { get; set; } = new (string, Unit?)[8,8];
+        public (string, Unit?)[,] Positions { get; set; } = new (string, Unit?)[defaultFileSize, defaultRankSize];
 
         private void InitPositions()
         {
@@ -24,9 +26,9 @@
                     { 7, "h"}
                 };
 
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < (defaultFileSize-1); i++)
             {
-                for (int j = 1; j <= 8; j++) // ranks
+                for (int j = 1; j <= defaultRankSize; j++) // ranks
                 {
                     var id = $"{files[i] + "" + j}";
                     //Console.WriteLine($"Initializing {id}", id);
@@ -35,8 +37,26 @@
             }
         }
 
-        private Unit? GetUnitFromPosition(string posid)
+        public IEnumerable<T> Flatten<T>(T[,] map)
         {
+            for (int row = 0; row < map.GetLength(0); row++)
+            {
+                for (int col = 0; col < map.GetLength(1); col++)
+                {
+                    yield return map[row, col];
+                }
+            }
+        }
+
+        public Unit? GetUnitFromIdentifier(string posid)
+        {
+            var flatList = Flatten(Positions);
+            var item = flatList.Where(x => x.Item1 == posid).FirstOrDefault();
+
+            if(item.Item2 is not null)
+            {
+                return item.Item2;
+            }
             return null;
         }
 
